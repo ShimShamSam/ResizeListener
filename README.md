@@ -1,6 +1,6 @@
 # ResizeListener
 
-ResizeListener is a way to detect changes in element size. It's lightweight, super fast, and cross-browser (it even works in IE5).
+ResizeListener is a JavaScript library that can detect changes in element size. It's lightweight, super fast, and cross-browser (it even works in IE5).
 All changes in size are detected regardless of how they are triggered (CSS changes, content changes, window size changes, etc).
 Try the [demo](https://shimshamsam.github.io/ResizeListener/).
 
@@ -22,7 +22,7 @@ ResizeListener.add(my_element, function(data) {
 
 ## How it works
 
-Hidden elements are appended to the elements you wish to monitor. These hidden elements exploit scrollbar behavior when elements change in size and react to the corresponding scroll events. The events are then aggregated and throttled using **requestAnimationFrame** (or **setTimeout** in older browsers) to make a fast and efficient way to listen for changes in element size.
+Hidden elements are appended to the elements you want to monitor. These hidden elements exploit their scrollbar behavior when they change in size and react to the corresponding scroll events. The events are then aggregated and throttled using **requestAnimationFrame** (or **setTimeout** in older browsers) to make a fast and efficient way to listen for changes in element size.
 
 
 ## Limitations

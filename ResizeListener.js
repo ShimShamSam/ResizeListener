@@ -48,8 +48,8 @@
 	// API export
 	var api = {
 		add : function add(elements, callbacks) {
-			elements  = normalizeArray(elements);
-			callbacks = normalizeArray(callbacks);
+			elements  = wrapInArray(elements);
+			callbacks = wrapInArray(callbacks);
 
 			for(var i = 0; i < elements.length; ++i) {
 				for(var j = 0; j < callbacks.length; ++j) {
@@ -59,12 +59,8 @@
 		},
 
 		remove : function remove(elements, callbacks) {
-			elements  = normalizeArray(elements);
-			callbacks = normalizeArray(callbacks);
-
-			if(!callbacks.length) {
-				callbacks.push(null);
-			}
+			elements  = wrapInArray(elements);
+			callbacks = wrapInArray(callbacks);
 
 			for(var i = 0; i < elements.length; ++i) {
 				for(var j = 0; j < callbacks.length; ++j) {
@@ -246,8 +242,8 @@
 
 	/**
 	 * Gets the listener object for a given element
-	 * @param  {HTMLElement}      element The element to get the listener for
-	 * @return {Object|undefined}         The listener or undefined if one was not found
+	 * @param  {HTMLElement} element The element to get the listener for
+	 * @return {Object|null}         The listener or null if one was not found
 	 */
 	function getListener(element) {
 		if(element[_private]) {
@@ -261,13 +257,20 @@
 				return child[_private];
 			}
 		}
+
+		return null;
 	}
 
-	function normalizeArray(array) {
-		if(array && (typeof array === 'function' || array.length === undefined)) {
-			return [array];
+	/**
+	 * Wraps a value in an array if it isn't one
+	 * @param  {*} value The value to wrap
+	 * @return {*}       The wrapped value
+	 */
+	function wrapInArray(value) {
+		if(!value || typeof value !== 'object' || typeof value.length === 'undefined') {
+			return [value];
 		}
 
-		return array;
+		return value;
 	}
 }(this));

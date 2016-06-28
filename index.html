@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>ResizeListener | Detect when HTML elements change in size</title>
+		<link rel="stylesheet" type="text/css" href="demo/demo.css">
+	</head>
+	<body>
+		<div class="page-header">
+			<h1 class="page-title">Resize<span class="small-title">Listener</span></h1>
+			<h2 class="page-subtitle">Detect when HTML elements change in size</h2>
+
+			<div class="buttons">
+				<a class="download-button button" href="https://github.com/ShimShamSam/ResizeListener/blob/master/ResizeListener.min.js">
+					<img class="icon" src="demo/download.png">
+					Download
+				</a>
+				<a class="github-button button" href="https://github.com/ShimShamSam/ResizeListener">
+					<img class="icon" src="demo/github.png">
+					GitHub
+				</a>
+			</div>
+		</div>
+
+		<div class="page-content">
+			<p class="summary">
+				ResizeListener is a JavaScript library that provides an efficient way to instantly react to changes in element size.
+				It uses hidden elements that exploit scrollbar behavior which allows for a completely event-driven way of detecting size changes.
+				View the <a href="https://github.com/ShimShamSam/ResizeListener">GitHub page</a> for information and API documentation.
+			</p>
+
+			<table class="feature-table">
+				<tr>
+					<td>
+						<div class="feature">
+							<div class="key-point">Event-Based</div>
+							<div class="details">Does not constantly poll the DOM for changes</div>
+						</div>
+					</td>
+					<td>
+						<div class="feature">
+							<div class="key-point">Universal</div>
+							<div class="details">Detects all changes in size regardless of what caused them</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="feature">
+							<div class="key-point">Cross-Browser</div>
+							<div class="details">Tested in IE5+, Chrome, FireFox, Safari, and Opera</div>
+						</div>
+					</td>
+					<td>
+						<div class="feature">
+							<div class="key-point">Light Weight</div>
+							<div class="details">Only 1.14KB (gzipped)</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+
+			<div class="test-container">
+				<div class="test-title">Demo</div>
+				<div class="test-description">Drag the handles to resize the element</div>
+
+				<div id="test-0" class="test-element" unselectable="on">
+					<div class="test-text">200x200</div>
+
+					<div class="right-handle handle">
+						<div class="handle-grip">
+							<div class="dot first"></div>
+							<div class="dot second"></div>
+							<div class="dot third"></div>
+						</div>
+					</div>
+					<div class="bottom-handle handle">
+						<div class="handle-grip">
+							<div class="dot first"></div>
+							<div class="dot second"></div>
+							<div class="dot third"></div>
+						</div>
+					</div>
+				</div>
+
+				<pre class="test-code">ResizeListener.add(my_element, function(data) {
+	my_text.innerHTML = data.width + 'x' + data.height;
+});</pre>
+			</div>
+		</div>
+
+		<script src="ResizeListener.min.js"></script>
+		<script src="demo/demo.js"></script>
+	</body>
+</html>

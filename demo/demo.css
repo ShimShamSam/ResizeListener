@@ -1,0 +1,249 @@
+html {
+	width: 100%;
+	height: 100%;
+	font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+}
+
+body {
+	margin: 0;
+	text-align: center;
+}
+
+img {
+	border: 0;
+}
+
+a {
+	color: #710069;
+	text-decoration: underline;
+}
+
+/* =============================================================================
+/* Header
+/* ========================================================================== */
+
+.page-header {
+	display: block;
+	height: 250px;
+	background: #000000 url(bg.png);
+	color: #EEEEEE;
+	text-align: center;
+	overflow: hidden;
+}
+
+.page-title {
+	margin: 30px 0 0;
+	font-size: 40px;
+	font-weight: bold;
+}
+
+.small-title {
+	font-weight: normal;
+}
+
+.page-subtitle {
+	margin: 10px 0 0;
+	font-size: 22px;
+	font-weight: normal;
+}
+
+.buttons {
+	margin-top: 30px;
+}
+
+.button {
+	display: inline-block;
+	margin: 0 10px;
+	width: 175px;
+	padding: 15px 0;
+	border: 1px solid;
+	color: #EEEEEE;
+	font-size: 18px;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.icon {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 5px;
+	width: 24px;
+	height: 24px;
+}
+
+.download-button {
+	border-color: #863380;
+	background-color: #710069;
+}
+
+.download-button:hover {
+	border-color: #6D2167;
+	background-color: #52014C;
+}
+
+.github-button {
+	border-color: #999999;
+	background-color: transparent;
+}
+
+.github-button:hover {
+	border-color: #777777;
+	background-color: #222222;
+}
+
+/* =============================================================================
+/* Content
+/* ========================================================================== */
+
+.page-content {
+	display: block;
+	margin: 0 auto;
+	width: 1000px;
+	text-align: left;
+}
+
+.summary {
+	margin: 20px 0;
+	font-size: 20px;
+}
+
+.feature-table {
+	margin-bottom: 20px;
+	width: 100%;
+	border: 0;
+	border-collapse: collapse;
+}
+
+.feature-table td {
+	vertical-align: top;
+	padding: 20px;
+	width: 50%;
+	text-align: center;
+}
+
+.feature {
+	display: block;
+	margin: auto;
+	padding: 10px;
+	width: 300px;
+	height: 90px;
+	border: 3px solid #710069;
+	background-color: #FAFAFA;
+}
+
+.key-point {
+	margin-bottom: 5px;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+/* =============================================================================
+/* Demo
+/* ========================================================================== */
+
+#test-0 {
+	width: 200px;
+	height: 200px;
+}
+
+.test-container {
+	margin-bottom: 50px;
+}
+
+.test-title {
+	margin-bottom: 5px;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.test-description {
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+
+.test-element {
+	position: relative;
+	background-color: #111111;
+	color: #EEEEEE;
+	overflow: hidden;
+}
+
+.test-text {
+	position: absolute;
+	margin: 0;
+	top: 10px;
+	left: 0;
+	width: 100%;
+	font-size: 30px;
+	font-weight: bold;
+	text-align: center;
+	white-space: nowrap;
+}
+
+.handle {
+	position: absolute;
+	background-color: #444444;
+	text-align: center;
+	overflow: hidden;
+}
+
+.handle-grip {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+
+.handle-grip .dot {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 4px;
+	height: 4px;
+	margin: -2px;
+	background-color: #DDDDDD;
+	overflow: hidden;
+}
+
+.right-handle {
+	top: 0;
+	right: 0;
+	height: 100%;
+	width: 16px;
+	cursor: ew-resize;
+}
+
+.right-handle .dot {
+	left: 50%;
+}
+
+.right-handle .first {
+	top: -10px;
+}
+
+.right-handle .third {
+	top: 10px;
+}
+
+.bottom-handle {
+	bottom: 0;
+	left: 0;
+	height: 16px;
+	width: 100%;
+	cursor: ns-resize;
+}
+
+.bottom-handle .first {
+	left: -10px;
+}
+
+.bottom-handle .third {
+	left: 10px;
+}
+
+.test-code {
+	margin: 10px 0;
+	padding: 10px;
+	background-color: #333333;
+	color: #FFFFFF;
+	font-size: 18px;
+}

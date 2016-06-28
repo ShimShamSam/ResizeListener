@@ -2,6 +2,7 @@
 
 ResizeListener is a JavaScript library that can detect changes in element size. It's lightweight, super fast, and cross-browser (it even works in IE5).
 All changes in size are detected regardless of how they are triggered (CSS changes, content changes, window size changes, etc).
+It's completely event-driven, so it doesn't need to constantly poll the DOM for size changes.
 Try the [demo](https://shimshamsam.github.io/ResizeListener/).
 
 
